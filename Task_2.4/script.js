@@ -182,4 +182,4 @@ time_btn.addEventListener("click",()=>{
 	document.getElementById("t1").innerText ="Time is : " + timeSpentInSeconds
 	console.log(timeSpentInSeconds)
 })
-// test push 
+// test push 2.0
