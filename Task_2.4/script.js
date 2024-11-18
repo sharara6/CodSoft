@@ -1,5 +1,9 @@
+const date = new Date()
+const startTime = date.getTime()
+console.log(startTime)
 const list_el = document.getElementById("list");
 const create_btn_el = document.getElementById("create");
+const time_btn = document.getElementById("time");
 
 
 
@@ -7,6 +11,17 @@ const create_btn_el = document.getElementById("create");
 
 
 let todos = [];
+
+
+function getTimeSpent(){
+	const date2 = new Date()
+	const currentTime =  date2.getTime()
+	console.log(currentTime)
+	const timeSpent = currentTime-startTime
+	return timeSpent
+	console.l
+}
+
 
 create_btn_el.addEventListener('click', CreateNewTodo);
 
@@ -162,3 +177,8 @@ function Load(){
         todos = JSON.parse(data);
     }
 }
+time_btn.addEventListener("click",()=>{
+	const timeSpentInSeconds= getTimeSpent()/ 1000
+	document.getElementById("t1").innerText ="Time is : " + timeSpentInSeconds
+	console.log(timeSpentInSeconds)
+})
